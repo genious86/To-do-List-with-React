@@ -12,6 +12,9 @@ function ToDoList(){
 
     function addtask (){
 
+        SetTask(t=> [...t, newtasks])
+        SetNewTask("")
+
     }
 
     function deletetask (index){
