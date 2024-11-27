@@ -12,7 +12,7 @@ function ToDoList(){
 
     function addtask (){
 
-        if (){
+        if (newtasks.trim() !==""){
 
             SetTask(t=> [...t, newtasks])
             SetNewTask("")
@@ -22,6 +22,9 @@ function ToDoList(){
     }
 
     function deletetask (index){
+
+        const updatedTasks =tasks.filter((element, i) => i !==index)
+        SetTask(updatedTasks)
 
     }
 
