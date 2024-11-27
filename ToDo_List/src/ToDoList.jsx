@@ -12,8 +12,12 @@ function ToDoList(){
 
     function addtask (){
 
-        SetTask(t=> [...t, newtasks])
-        SetNewTask("")
+        if (){
+
+            SetTask(t=> [...t, newtasks])
+            SetNewTask("")
+    
+        }
 
     }
 
