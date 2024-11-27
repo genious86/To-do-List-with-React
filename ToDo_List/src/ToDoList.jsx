@@ -30,6 +30,14 @@ function ToDoList(){
 
     function movetaskup (index){
 
+        if(index > 0){
+            const updatedTasks = [...tasks];
+            [updatedTasks[index], updatedTasks[index-1]] = 
+            [updatedTasks[index-1],updatedTasks[index]]
+
+            SetTask(updatedTasks)
+        }
+
     }
 
     function movetaskdown (index){
