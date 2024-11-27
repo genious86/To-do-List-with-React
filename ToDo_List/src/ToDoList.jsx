@@ -1,10 +1,14 @@
-import { useState } from "react"
-import React,{useState} from "react"
+import React, {useState} from "react"
 
 function ToDoList(){
 
     const [tasks, SetTask] = useState([])
     const [newtasks, SetNewTask] = useState("")
+
+    function handleinputChange(event){
+        SetNewTask(event.target.value)
+
+    }
 
     function addtask (){
 
@@ -21,8 +25,20 @@ function ToDoList(){
     function movetaskdown (index){
 
     }
-    
-    return(<></>)
+
+    return(<div className="to_do_list">
+
+            <h1> TO-DO-LIST</h1>
+            <div>
+                <input 
+                    type="text" 
+                    placeholder="Add Task"
+                    value={newtasks}
+                    onChange={handleinputChange}/>
+                    
+            </div>
+
+    </div>)
 }
 
 export default ToDoList
